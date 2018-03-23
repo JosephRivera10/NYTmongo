@@ -14,9 +14,9 @@ module.exports = function(app) {
 // A GET route for scraping the echojs website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
-  axios.get("http://www.echojs.com/").then(function(response) {
+  request("http://www.echojs.com/", function(error, response, html) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
-    var $ = cheerio.load(response.data);
+    var $ = cheerio.load(html);
 
     // Now, we grab every h2 within an article tag, and do the following:
     $("article h2").each(function(i, element) {
@@ -44,7 +44,7 @@ app.get("/scrape", function(req, res) {
     });
 
     // If we were able to successfully scrape and save an Article, send a message to the client
-    res.send("Scrape Complete");
+    // res.send("Scrape Complete");
   });
 });
 
