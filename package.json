@@ -1,33 +1,19 @@
 {
-  "name": "soccernews",
+  "name": "mongo_homework",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JosephRivera10/soccerNews.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JosephRivera10/soccerNews/issues"
-  },
-  "homepage": "https://github.com/JosephRivera10/soccerNews#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.3",
+    "express": "^4.16.1",
     "express-handlebars": "^3.0.0",
-    "moment": "^2.21.0",
-    "mongoose": "^5.0.11",
-    "morgan": "^1.9.0",
-    "path": "^0.12.7",
-    "request": "^2.85.0"
-  },
-  "devDependencies": {},
-  "keywords": []
+    "mongoose": "^5.0.11"
+  }
 }
